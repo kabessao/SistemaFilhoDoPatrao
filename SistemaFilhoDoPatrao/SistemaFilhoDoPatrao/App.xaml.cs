@@ -12,8 +12,7 @@ namespace SistemaFilhoDoPatrao
         public App()
         {
             InitializeComponent();
-
-            MainPage = new SistemaFilhoDoPatrao.MainPage();
+            MainPage = new NavigationPage(new Login());
         }
 
         protected override void OnStart()

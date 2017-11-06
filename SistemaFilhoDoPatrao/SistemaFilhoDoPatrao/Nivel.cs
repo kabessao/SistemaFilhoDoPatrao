@@ -3,15 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Xamarin.Forms;
 
 namespace SistemaFilhoDoPatrao
 {
-    public partial class MainPage : ContentPage
+    enum Nivel
     {
-        public MainPage()
-        {
-            InitializeComponent();
-        }
+        SysAdmin,
+        Dono,
+        Funcionario
     }
 }
