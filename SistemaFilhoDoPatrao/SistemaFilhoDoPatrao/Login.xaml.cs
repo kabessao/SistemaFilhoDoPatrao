@@ -10,11 +10,20 @@ namespace SistemaFilhoDoPatrao
     public partial class Login : ContentPage
     {
 
-        List<Usuario> Usuarios = Usuario.GerarUsuarios();
+
+        internal static Usuario UsuarioLogado { get; private set; }
+
+        private List<Usuario> Usuarios = Usuario.GerarUsuarios();
+
+        
+
         public Login()
         {
             NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
+
+            if (String.IsNullOrWhiteSpace(txtNome.Text))
+                txtNome.Focus();
 
             txtNome.Completed += (s, e) => txtSenha.Focus();
             txtSenha.Completed += Logar;
@@ -23,9 +32,16 @@ namespace SistemaFilhoDoPatrao
         private void Logar(object sender, EventArgs e)
         {
             if (Usuarios.Any(x => x.Nome.Equals(txtNome.Text) && x.Senha.Equals(txtSenha.Text)))
-                DisplayAlert("", "Logado com sucesso!", "Ok");
+                Confirmar();
             else
                 DisplayAlert("Erro", "Usuario ou senha incoretos!", "Ok");
+        }
+
+        private async void Confirmar()
+        {
+            await DisplayAlert("Sucesso", "Logado com sucesso!", "Ok");
+            UsuarioLogado = Usuarios.Where(x => x.Nome.Equals(txtNome.Text) && x.Senha.Equals(txtSenha.Text)).First();
+            App.Current.MainPage = new NavigationPage(new Menu());
         }
     }
 }

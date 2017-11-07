@@ -11,13 +11,17 @@
                    FontSize="45"/>
 
             <Entry x:Name="txtNome"
-                   Placeholder="Nome"/>
+                   Placeholder="Nome"
+                   Text="Sysadmin"/>
 
             <Entry x:Name="txtSenha"
-                   Placeholder="Senha"/>
+                   Placeholder="Senha"
+                   IsPassword="True"
+                   Text="123"/>
 
             <Button Text="Logar"
-                    Clicked="Logar" />
+                    Clicked="Logar" 
+                    />
 
             
 
