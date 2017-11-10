@@ -7,15 +7,14 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace SistemaFilhoDoPatrao
+namespace SistemaFilhoDoPatrao.Paginas
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MenuDetail : ContentPage
+    public partial class Funcionarios : ContentPage
     {
-        public MenuDetail()
+        public Funcionarios()
         {
             InitializeComponent();
-            
         }
     }
 }

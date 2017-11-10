@@ -53,6 +53,12 @@
     </Compile>
     <Compile Include="Classes\MenuMenuItem.cs" />
     <Compile Include="Classes\Nivel.cs" />
+    <Compile Include="Paginas\Funcionarios.xaml.cs">
+      <DependentUpon>Funcionarios.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Pedidos.xaml.cs">
+      <DependentUpon>Pedidos.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Classes\Usuarios.cs" />
   </ItemGroup>
@@ -94,6 +100,18 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Menu\MenuDetail.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Paginas\Pedidos.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Paginas\Funcionarios.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

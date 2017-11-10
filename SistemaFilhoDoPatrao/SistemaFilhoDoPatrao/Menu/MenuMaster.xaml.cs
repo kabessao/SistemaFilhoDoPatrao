@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+using SistemaFilhoDoPatrao.Paginas;
+
 namespace SistemaFilhoDoPatrao
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
@@ -34,11 +36,9 @@ namespace SistemaFilhoDoPatrao
             {
                 MenuItems = new ObservableCollection<MenuMenuItem>(new[]
                 {
-                    new MenuMenuItem { Id = 0, Title = "Page 1" },
-                    new MenuMenuItem { Id = 1, Title = "Page 2" },
-                    new MenuMenuItem { Id = 2, Title = "Page 3" },
-                    new MenuMenuItem { Id = 3, Title = "Page 4" },
-                    new MenuMenuItem { Id = 4, Title = "Page 5" },
+                    new MenuMenuItem { Id = 0, Title = "Pagina inicial" },
+                    new MenuMenuItem { Id = 1, Title = "Cadastro de pedidos", TargetType = new  Pedidos().GetType()},
+                    new MenuMenuItem { Id = 2, Title = "Funcionarios", TargetType = new Funcionarios().GetType()},
                 });
             }
 
